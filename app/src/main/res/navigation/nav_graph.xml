@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.galal.bsfproject.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment2"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment3"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.galal.bsfproject.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.galal.bsfproject.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.galal.bsfproject.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_transactionsFragment"
+            app:destination="@id/transactionsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_beneficiariesFragment"
+            app:destination="@id/beneficiariesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.galal.bsfproject.TransactionsFragment"
+        android:label="fragment_transactions"
+        tools:layout="@layout/fragment_transactions" />
+    <fragment
+        android:id="@+id/beneficiariesFragment"
+        android:name="com.galal.bsfproject.BeneficiariesFragment"
+        android:label="fragment_beneficiaries"
+        tools:layout="@layout/fragment_beneficiaries" >
+        <action
+            android:id="@+id/action_beneficiariesFragment_to_addBeneficiaryFragment"
+            app:destination="@id/addBeneficiaryFragment" />
+        <action
+            android:id="@+id/action_beneficiariesFragment_to_deleteFragment"
+            app:destination="@id/deleteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBeneficiaryFragment"
+        android:name="com.galal.bsfproject.AddBeneficiaryFragment"
+        android:label="fragment_add_beneficiary"
+        tools:layout="@layout/fragment_add_beneficiary" >
+        <action
+            android:id="@+id/action_addBeneficiaryFragment_to_confirmBeneficiaryFragment"
+            app:destination="@id/confirmBeneficiaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmBeneficiaryFragment"
+        android:name="com.galal.bsfproject.ConfirmBeneficiaryFragment"
+        android:label="fragment_confirm_beneficiary"
+        tools:layout="@layout/fragment_confirm_beneficiary" />
+    <fragment
+        android:id="@+id/deleteFragment"
+        android:name="com.galal.bsfproject.DeleteFragment"
+        android:label="fragment_delete"
+        tools:layout="@layout/fragment_delete" />
+
+
+</navigation>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddBeneficiaryFragment">
+
+    <ImageView
+        android:id="@+id/add_beneficiaries_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:paddingVertical="2dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/back_ic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/enter_benef_deta_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter beneficiary details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/light_black"
+        app:layout_constraintStart_toEndOf="@+id/add_beneficiaries_back"
+        app:layout_constraintTop_toBottomOf="@+id/add_beneficiaries_back"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/add_benef_bank_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BSF Bank"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/light_grey"
+        app:layout_constraintStart_toStartOf="@+id/enter_benef_deta_tv"
+        app:layout_constraintTop_toBottomOf="@+id/enter_benef_deta_tv"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/add_benef_acc_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acoount number"
+        android:textSize="20sp"
+        android:textColor="@color/light_black"
+        android:textStyle="bold"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toStartOf="@+id/add_beneficiaries_back"
+        app:layout_constraintTop_toBottomOf="@+id/add_benef_bank_name_tv"
+        />
+
+    <EditText
+        android:id="@+id/add_benef_acc_num_et"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_et"
+        android:ems="10"
+        android:hint="Enter account number"
+        android:inputType="number"
+        android:paddingStart="16dp"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_benef_acc_num_tv"
+        app:layout_constraintTop_toBottomOf="@+id/add_benef_acc_num_tv" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continue_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Continue"
+        android:textColor="@color/dark_green"
+        android:layout_marginEnd="16dp"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/tab_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
